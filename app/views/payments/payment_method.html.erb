@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="left-side">
+    <%= image_tag 'back', class: 'back'%>
+  </div>
+  <div class="payments-container">
+    <h3 class="title"> Paga tu investigación </h3>
+    <p class="description">
+      Con este pago de <b class="price">$450</b> cubres el costo de tu
+      investigación, esto es necesario para <b> aplicar a
+      cualquiera de nuestros inmuebles </b>
+    </p>
+    <h3>¿Tienes un cupón de descuento?</h3>
+    <div class="coupon">
+      <%= text_field_tag 'coupon', nil, placeholder: 'HOMIE_50'%>
+    </div>
+    <div class="button">
+      <span><%= button_to 'Eliminar', @payment_method, method: :delete, data: { confirm: 'Are you sure?' }%></span>
+    </div>
+    <div class="check-coupon-apply">
+      <%= image_tag 'check'%>
+      <%= label_tag 'Tu cupón ha sido aplicado' %>
+    </div>
+    <h3>Elige tu método de pago</h3>
+    <div class="payment-methods">
+      <div class="methods">
+        <%= render 'layouts/images' %>
+      </div>
+    </div>
+  </div>
+  <div class="right-side"></div>
+</div>

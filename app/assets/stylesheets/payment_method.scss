@@ -1,0 +1,138 @@
+%sides-properties {
+  width: 80px;
+}
+
+%flex-containers {
+  float: left;
+  width: 75px;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: 'Product Sans', sans-serif;
+  color: #464748;
+}
+
+.container {
+  width: 500px;
+  height: 400px;
+  border: 0.5px solid #625180;
+  margin: auto;
+  padding: 20px;
+
+  .left-side {
+    @extend %sides-properties;
+    @extend %flex-containers;
+    margin-top: 5px;
+
+    img {
+      width: 50px;
+      height: 40px;
+    }
+
+    .back {
+      width: 30px;
+      float: right;
+      padding: 10px 10px 0 0;
+    }
+  }
+
+  .right-side {
+    @extend %sides-properties;
+    @extend %flex-containers;
+  }
+
+  .payments-container {
+    width: 350px;
+    float: left;
+    padding: 10px;
+
+    .description {
+      font-size: 14px;
+      line-height: 20px;
+      padding: 0 0 25px 0;
+      width: 300px;
+
+      .price {
+        color: #bb91ff;
+      }
+    }
+
+    .coupon {
+
+      input {
+        margin-right: 20px;
+        border: solid 0.5px #9c9fa1 ;
+        border-radius: 2px;
+        padding: 10px;
+        width: 150px;
+        float: left;
+      }
+    }
+
+    .button {
+
+      input {
+        color: #625180;
+        background-color: #fff;
+        border: solid 0.5px #625180 ;
+        border-radius: 2px;
+        padding: 10px;
+        font-weight: bold;
+        width: 110px;
+      }
+    }
+
+    .check-coupon-apply {
+
+      img {
+        padding: 0;
+      }
+
+      label {
+        font-size: 12px;
+      }
+    }
+
+    .payment-methods {
+      width: 600px;
+
+      .methods {
+
+        img {
+          border: 0.5px solid #625180;
+          border-radius: 2px;
+          margin-right: 20px;
+          padding: 15px 20px;
+          width: 46px;
+          height: 28px;
+        }
+
+        #card {
+          float: left;
+
+          #purple-card {
+            display: none;
+          }
+        }
+
+        #oxxo {
+          float: left;
+
+          #purple-oxxo {
+            display: none;
+          }
+        }
+
+        #spei {
+          float: left;
+
+          #purple-spei {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
